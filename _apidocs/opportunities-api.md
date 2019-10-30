@@ -3252,17 +3252,16 @@ Error codes may change depending on the error given; document will be updated ac
 Error Code|Field | Error Message | Reason/Description | Operation
 -----|------|---------------|--------------------|----------
 400|Additional Reporting |	This opportunity cannot be published. Additional reporting is required. |	Additional Reporting is required with valid values of “none” or “recovery_act”	| Publish
-400|Title |	This opportunity cannot be published. Title is a required field. |	Title is a required field.	| Publish
-400|Title |	This opportunity cannot be published. Title max character length is 256. |	Title max character length is 256.	| Publish
+400|Title |	Title max character length is 256. |	Title max character length is 256.	| Publish
 400|ARCHIVE |	This opportunity is not the latest published. |	Draft Opportunity cannot be archived.	| Archive
 400|Archive Date |	$.archive.date: does not match the date pattern ^\\d{4}-(?:0[0-9]{1}\1[0-2]{1})-(0?[1-9]\[12][0-9]\3[01])$ |	Archive Date must be in specified format |	Create, Publish, Uncancel, Unarchive
 400|Archive Date |	This opportunity cannot be published. Inactive date is a required field. |	Archive Date is required if Archive Type = autocustom |	Create, Publish, Uncancel, Unarchive
-400|Archive Date Response Date   |	This opportunity cannot be published. One of Response date or Archive date is required |	Either Response date or archive date is required for presolicitation, sources sought, special notice, sale surplus  |	Publish
-400|Archive Date |	This opportunity cannot be published. Inactive date provided is an invalid format. |	Date is not in specified format  |	Create, Publish, Uncancel, Unarchive
+400|Archive Date Response Date   |	One of Response date or Archive date is required |	Either Response date or archive date is required for presolicitation, sources sought, special notice, sale surplus  |	Publish
+400|Archive Date |	Inactive date provided is an invalid format. |	Date is not in specified format  |	Create, Publish, Uncancel, Unarchive
 400|Archive Type |	This opportunity cannot be published. Inactive Policy is a required field. |	Archive Type is required |	Publish
 400|Archive Type |	$.archive.type: does not have a value in the enumeration[auto15, auto30, autocustom] |	Archive type must be specified value | Create, Publish, Uncancel, Unarchive
 400|Archive Type |	This opportunity cannot be published. Auto 15 archive type is not allowed for this opportunity type. | Archive Type = auto15 not allowed |	Publish
-400|Archive Type |	This opportunity cannot be published. Auto 30 archive type is not allowed for this opportunity type. | Archive Type = auto30   not allowed for Intent bundle and Justification |	Publish
+400|Archive Type |	Auto 30 archive type is not allowed for this opportunity type. | Archive Type = auto30   not allowed for Intent bundle and Justification |	Publish
 400|attType |	Attachment must have AttType of file or link |	Attachment type must be a file or a line |	Create Attachment
 401|Authorization |	Insufficient privileges to edit opportunity |	See User Account Authorization section |	Update, Publish, Revise
 401|Authorization |	Insufficient privileges to create opportunity |	Insufficient privileges to create an award notice. See User Account Authorization section for more details. |	Create Opportunity
@@ -3290,9 +3289,9 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Justification Authority |	This opportunity cannot be published. Justification Authority Modification Number is not valid field for this opportunity type | Justification Authority Modification Number is only valid for Type "u" Justification and Authorization | Publish
 400|NAICS Code | This opportunity cannot be published. NAICS provided did not match expected codes | NAICS Code is invalid | Create Opportunity, Publish
 400|NAICS Type | $.data.naics[0].type: does not have a value in the enumeration [primary] | NAICS Type is required | Create Opportunity
-400|Notice Type |	This opportunity cannot be published. The opportunity type `j` is no longer supported	| See Notice Types table for valid notice types |	Publish
-400|Notice Type |	This opportunity cannot be published. The opportunity type `m` is no longer supported	| See Notice Types table for valid notice types |	Publish
-400|Notice Type |	This opportunity cannot be published. The opportunity type `l` is no longer supported	| See Notice Types table for valid notice types |	Publish
+400|Notice Type |	The opportunity type `j` is no longer supported	| See Notice Types table for valid notice types |	Publish
+400|Notice Type |	The opportunity type `m` is no longer supported	| See Notice Types table for valid notice types |	Publish
+400|Notice Type |	The opportunity type `l` is no longer supported	| See Notice Types table for valid notice types |	Publish
 400|Opportunity ID | Opportunity ID for the selected opportunity type already exists | Cannot publish an existing published record | Publish
 400|Opportunity ID | Opportunity cannot be updated | An Opportunity cannot be revised if that Opporutnity was revised previously and is currently in draft state  | Revise
 404|Notice ID | Notice ID is required	| Notice ID is required | All
@@ -3311,12 +3310,12 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Point of Contact Type |	$.data.pointOfContact[0].type: does not have a value in the enumeration [primary, secondary, owner] |	Point of Contact Type is required |	Create Opportunity
 400|Point of Contact Email |	Primary Contact – Email is required	| If Contact email is missing. This is a required field	| Publish
 400|Primary Contact Full Name |	Primary Contact - Name is required | Point of Contact Full Name is required | Publish
-400|Response Date |	This opportunity cannot be published. Response Date is a required field |	Response Date is only valid for Notice Type “o” |	Publish
-400|Response Date |	This opportunity cannot be published. Response Date provided is an invalid format. |	Response Date provided is an invalid format. |	Publish
-400|Response Date |	This opportunity cannot be published. Response Date cannot be in the past. |	Response Date cannot be in the past. |	Publish
-400|Response Date |	This opportunity cannot be published. Response Date set would result in inactive date being in the past. |	Response Date provided is within 15 days |	Publish
-400|Response Date |	This opportunity cannot be published. Auto 15 archive type is not allowed for this opportunity type. |	Auto 15 archive type is not allowed for award notice |	Publish
-400|Response Date |	This opportunity cannot be published. Response Date cannot exceed 5 years from current date. |	Response Date cannot exceed 5 years from current date. |	Publish 
+400|Response Date |	Response Date is a required field |	Response Date is only valid for Notice Type “o” |	Publish
+400|Response Date |	Response Date provided is an invalid format. |	Response Date provided is an invalid format. |	Publish
+400|Response Date |	Response Date cannot be in the past. |	Response Date cannot be in the past. |	Publish
+400|Response Date |	Response Date set would result in inactive date being in the past. |	Response Date provided is within 15 days |	Publish
+400|Response Date |	Auto 15 archive type is not allowed for this opportunity type. |	Auto 15 archive type is not allowed for award notice |	Publish
+400|Response Date |	Response Date cannot exceed 5 years from current date. |	Response Date cannot exceed 5 years from current date. |	Publish 
 400|Title |	Title is required |	Title is required |	Publish
 400|UNARCHIVE |	This opportunity is not the latest published |	Only archived notices can be unarchived | UNARCHIVE
 400|resourceName | Attachment must have a name | File Name is a required field |	Create Attachment
