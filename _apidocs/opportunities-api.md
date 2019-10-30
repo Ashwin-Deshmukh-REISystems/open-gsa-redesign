@@ -3308,6 +3308,9 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Point of Contact Email |	Primary Contact – Email is required	| If Contact email is missing. This is a required field	| Publish
 400|Primary Contact Full Name |	Primary Contact - Name is required | Point of Contact Full Name is required | Publish
 400|Response Date |	This opportunity cannot be published. Response Date is a required field |	Response Date is only valid for Notice Type “o” |	Publish
+400|Response Date |	This opportunity cannot be published. Response Date provided is an invalid format. |	Response Date provided is an invalid format. |	Publish
+400|Response Date |	This opportunity cannot be published. Response Date set would result in inactive date being in the past. |	Response Date provided is within 15 days |	Publish
+400|Response Date |	This opportunity cannot be published. Auto 15 archive type is not allowed for this opportunity type. |	Auto 15 archive type is not allowed for   award notice |	Publish
 400|Title |	Title is required |	Title is required |	Publish
 400|UNARCHIVE |	This opportunity is not the latest published |	Only archived notices can be unarchived | UNARCHIVE
 400|resourceName | Attachment must have a name | File Name is a required field |	Create Attachment
