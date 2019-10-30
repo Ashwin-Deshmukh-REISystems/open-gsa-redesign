@@ -3296,9 +3296,10 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Notice ID | Submitted solicitation number doesn't match the previous published opportunity	| Submitted solicitation number doesn't match the previous published opportunity for award notice type | All
 400|Opportunity Type | Opportunity type is required | Opportunity type is required | Create Opportunity
 400|Opportunity Type | errorCode":400,"message":"Opportunity type given is not a valid type." |	Opportunity type is empty |	Create Opportunity
-400|Organization Id |	Contracting office is required | FH Org Id/AAC code is required |	Publish
-400|Organization Id |	The Organization ID that you provided is an inactive and/or invalid. | Inactive/Invalid Organization Id |	Create Opportunity
-400|Organization Id |	The Organization ID that you provided is not an office level, and it must be for this opportunity type.	| Organization ID is not valid for opportunity type. Note: Organization ID must be Office level unless creating a Special Notice.	| Create Opportunity
+400|Organization Id |	Contracting Office is a required field. | FH Org Id/AAC code is required |	Publish
+400|Organization Id |	The Federal Organization ID that you provided is inactive and/or invalid. | Inactive/Invalid Organization Id |	Create Opportunity
+400|Organization Id |	The Federal Organization ID that you provided is not an office level, and it must be for this opportunity type.	| Organization ID is not valid for opportunity type. Note: Organization ID must be Office level unless creating a Special Notice.	| Create Opportunity
+400|Organization Id |	The Federal Organization ID that you provided is unmapped in Federal Hierarchy. | Organization ID length should be greater than 10 |	Publish
 400|Point of Contact Type |	$.data.pointOfContact[0].type: does not have a value in the enumeration [primary, secondary, owner] |	Point of Contact Type is required |	Create Opportunity
 400|Point of Contact Email |	Primary Contact – Email is required	| If Contact email is missing. This is a required field	| Publish
 400|Primary Contact Full Name |	Primary Contact - Name is required | Point of Contact Full Name is required | Publish
