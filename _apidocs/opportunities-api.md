@@ -3252,6 +3252,8 @@ Error codes may change depending on the error given; document will be updated ac
 Error Code|Field | Error Message | Reason/Description | Operation
 -----|------|---------------|--------------------|----------
 400|Additional Reporting |	This opportunity cannot be published. Additional reporting is required. |	Additional Reporting is required with valid values of “none” or “recovery_act”	| Publish
+400|Title |	This opportunity cannot be published. Title is a required field. |	Title is a required field.	| Publish
+400|Title |	This opportunity cannot be published. Title max character length is 256. |	Title max character length is 256.	| Publish
 400|ARCHIVE |	This opportunity is not the latest published. |	Draft Opportunity cannot be archived.	| Archive
 400|Archive Date |	$.archive.date: does not match the date pattern ^\\d{4}-(?:0[0-9]{1}\1[0-2]{1})-(0?[1-9]\[12][0-9]\3[01])$ |	Archive Date must be in specified format |	Create, Publish, Uncancel, Unarchive
 400|Archive Date |	This opportunity cannot be published. Inactive date is a required field. |	Archive Date is required if Archive Type = autocustom |	Create, Publish, Uncancel, Unarchive
