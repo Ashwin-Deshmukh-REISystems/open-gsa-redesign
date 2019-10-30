@@ -3257,6 +3257,7 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|ARCHIVE |	This opportunity is not the latest published. |	Draft Opportunity cannot be archived.	| Archive
 400|Archive Date |	$.archive.date: does not match the date pattern ^\\d{4}-(?:0[0-9]{1}\1[0-2]{1})-(0?[1-9]\[12][0-9]\3[01])$ |	Archive Date must be in specified format |	Create, Publish, Uncancel, Unarchive
 400|Archive Date |	This opportunity cannot be published. Inactive date is a required field. |	Archive Date is required if Archive Type = autocustom |	Create, Publish, Uncancel, Unarchive
+400|Archive Date Response Date   |	This opportunity cannot be published. One of Response date or Archive date is required |	Either Response date or archive date is required for presolicitation, sources sought, special notice, sale surplus  |	Publish
 400|Archive Date |	This opportunity cannot be published. Inactive date provided is an invalid format. |	Date is not in specified format  |	Create, Publish, Uncancel, Unarchive
 400|Archive Type |	This opportunity cannot be published. Inactive Policy is a required field. |	Archive Type is required |	Publish
 400|Archive Type |	$.archive.type: does not have a value in the enumeration[auto15, auto30, autocustom] |	Archive type must be specified value | Create, Publish, Uncancel, Unarchive
@@ -3312,8 +3313,10 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Primary Contact Full Name |	Primary Contact - Name is required | Point of Contact Full Name is required | Publish
 400|Response Date |	This opportunity cannot be published. Response Date is a required field |	Response Date is only valid for Notice Type “o” |	Publish
 400|Response Date |	This opportunity cannot be published. Response Date provided is an invalid format. |	Response Date provided is an invalid format. |	Publish
+400|Response Date |	This opportunity cannot be published. Response Date cannot be in the past. |	Response Date cannot be in the past. |	Publish
 400|Response Date |	This opportunity cannot be published. Response Date set would result in inactive date being in the past. |	Response Date provided is within 15 days |	Publish
-400|Response Date |	This opportunity cannot be published. Auto 15 archive type is not allowed for this opportunity type. |	Auto 15 archive type is not allowed for   award notice |	Publish
+400|Response Date |	This opportunity cannot be published. Auto 15 archive type is not allowed for this opportunity type. |	Auto 15 archive type is not allowed for award notice |	Publish
+400|Response Date |	This opportunity cannot be published. Response Date cannot exceed 5 years from current date. |	Response Date cannot exceed 5 years from current date. |	Publish 
 400|Title |	Title is required |	Title is required |	Publish
 400|UNARCHIVE |	This opportunity is not the latest published |	Only archived notices can be unarchived | UNARCHIVE
 400|resourceName | Attachment must have a name | File Name is a required field |	Create Attachment
