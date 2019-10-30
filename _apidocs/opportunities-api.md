@@ -3284,6 +3284,8 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|NAICS Code | This opportunity cannot be published. NAICS provided did not match expected codes | NAICS Code is invalid | Create Opportunity, Publish
 400|NAICS Type | $.data.naics[0].type: does not have a value in the enumeration [primary] | NAICS Type is required | Create Opportunity
 400|Notice Type |	This opportunity cannot be published. The opportunity type `j` is no longer supported	| See Notice Types table for valid notice types |	Publish
+400|Notice Type |	This opportunity cannot be published. The opportunity type `m` is no longer supported	| See Notice Types table for valid notice types |	Publish
+400|Notice Type |	This opportunity cannot be published. The opportunity type `l` is no longer supported	| See Notice Types table for valid notice types |	Publish
 400|Opportunity ID | Opportunity ID for the selected opportunity type already exists | Cannot publish an existing published record | Publish
 400|Opportunity ID | Opportunity cannot be updated | An Opportunity cannot be revised if that Opporutnity was revised previously and is currently in draft state  | Revise
 404|Opportunity ID | Opportunity ID is required	| Opportunity ID is required | All
