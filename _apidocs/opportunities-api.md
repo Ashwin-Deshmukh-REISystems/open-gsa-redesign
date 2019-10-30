@@ -3295,6 +3295,9 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Notice ID | Notice ID max length is 128 characters and allows only alphanumeric and - _ ( ) { } characters with no spaces.	| Notice ID max length is 128 characters and allows only alphanumeric and - _ ( ) { } characters with no spaces. | All
 400|Notice ID | Notice ID must be unique based on selected notice type.	| Notice ID must be unique when selected notice type is not an award notice. | All
 400|Notice ID | Submitted solicitation number doesn't match the previous published opportunity	| Submitted solicitation number doesn't match the previous published opportunity for award notice type | All
+400|Related Notice ID | This Related Notice's ID is invalid	| The Related Notice's ID is not found | All
+400|Related Notice ID | The Related Notice's Type is invalid for this Opportunity	| The Related Notice's Type cannot be related  | All
+400|Related Notice ID | Related Notice's ID needs to match previous Opportunity's Related Notice ID	| Related Notice's ID needs to match previous Opportunity's Related Notice ID  | All
 400|Opportunity Type | Opportunity type is required | Opportunity type is required | Create Opportunity
 400|Opportunity Type | errorCode":400,"message":"Opportunity type given is not a valid type." |	Opportunity type is empty |	Create Opportunity
 400|Organization Id |	Contracting Office is a required field. | FH Org Id/AAC code is required |	Publish
