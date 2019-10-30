@@ -3290,7 +3290,10 @@ Error Code|Field | Error Message | Reason/Description | Operation
 400|Notice Type |	This opportunity cannot be published. The opportunity type `l` is no longer supported	| See Notice Types table for valid notice types |	Publish
 400|Opportunity ID | Opportunity ID for the selected opportunity type already exists | Cannot publish an existing published record | Publish
 400|Opportunity ID | Opportunity cannot be updated | An Opportunity cannot be revised if that Opporutnity was revised previously and is currently in draft state  | Revise
-404|Opportunity ID | Opportunity ID is required	| Opportunity ID is required | All
+404|Notice ID | Notice ID is required	| Notice ID is required | All
+400|Notice ID | Notice ID max length is 128 characters and allows only alphanumeric and - _ ( ) { } characters with no spaces.	| Notice ID max length is 128 characters and allows only alphanumeric and - _ ( ) { } characters with no spaces. | All
+400|Notice ID | Notice ID must be unique based on selected notice type.	| Notice ID must be unique when selected notice type is not an award notice. | All
+400|Notice ID | Submitted solicitation number doesn't match the previous published opportunity	| Submitted solicitation number doesn't match the previous published opportunity for award notice type | All
 400|Opportunity Type | Opportunity type is required | Opportunity type is required | Create Opportunity
 400|Opportunity Type | errorCode":400,"message":"Opportunity type given is not a valid type." |	Opportunity type is empty |	Create Opportunity
 400|Organization Id |	Contracting office is required | FH Org Id/AAC code is required |	Publish
