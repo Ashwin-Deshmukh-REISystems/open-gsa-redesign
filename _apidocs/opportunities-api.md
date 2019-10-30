@@ -3252,6 +3252,7 @@ Error codes may change depending on the error given; document will be updated ac
 Error Code|Field | Error Message | Reason/Description | Operation
 -----|------|---------------|--------------------|----------
 400|Additional Reporting |	This opportunity cannot be published. Additional reporting is required. |	Additional Reporting is required with valid values of “none” or “recovery_act”	| Publish
+400|Additional Reporting |	Additional Reporting/Initiative is required. |	Additional Reporting/Initiative is required when opportunity is not a special notice | Publish
 400|Title |	Title max character length is 256. |	Title max character length is 256.	| Publish
 400|ARCHIVE |	This opportunity is not the latest published. |	Draft Opportunity cannot be archived.	| Archive
 400|Archive Date |	$.archive.date: does not match the date pattern ^\\d{4}-(?:0[0-9]{1}\1[0-2]{1})-(0?[1-9]\[12][0-9]\3[01])$ |	Archive Date must be in specified format |	Create, Publish, Uncancel, Unarchive
@@ -3282,13 +3283,17 @@ Error Code|Field | Error Message | Reason/Description | Operation
 401|CREATE ATTACHMENT |	Insufficient privileges to upload attachment | Attachments cannot be added to published notices |	Create Attachment
 400|Deadlines Response | This opportunity cannot be published. | Response Deadline Date is required |	Publish
 400|Description |	Description is required |	Description is required |	Publish
-400|IVL |	This opportunity cannot be published. Interested Vendors List Add is a required field. |Interested Vendors List Add is a required |	Publish
+400|IVL |	Interested Vendors List Add is a required field. |Interested Vendors List Add is a required |	Publish
+400|IVL |	Interested Vendors List Read is a required field. |Interested Vendors List Read is a required field. |	Publish
+400|IVL |	Interested Vendors List should be enabled for this organization. |Interested Vendors List should be enabled for this organization when FORCE ON |	Publish
+400|IVL |	Interested Vendors List should not be enabled for this organization. |Interested Vendors List should not be enabled for this organization when FORCE OFF |	Publish
 400|Justification Authority |	This opportunity cannot be published. Justification Authority is not valid field for this opportunity type | Justification Authority Section is not valid for Base Notice Types (s, o, p, r, g, k, i) | Publish
 400|Justification Authority |	This opportunity cannot be published. Justification Authority Modification Number is not valid field for this opportunity type. | Justification Authority Section is not valid for Base Notice Types (s, o, p, r, g, k, i) | Publish
 400|Justification Authority |	This opportunity cannot be published. Justification Authority is not valid field for this opportunity type | Justification Authority only valid for Type "u" Justification and Authorization | Publish
 400|Justification Authority |	This opportunity cannot be published. Justification Authority Modification Number is not valid field for this opportunity type | Justification Authority Modification Number is only valid for Type "u" Justification and Authorization | Publish
 400|NAICS Code | This opportunity cannot be published. NAICS provided did not match expected codes | NAICS Code is invalid | Create Opportunity, Publish
 400|NAICS Type | $.data.naics[0].type: does not have a value in the enumeration [primary] | NAICS Type is required | Create Opportunity
+400|Notice Type |	This opportunity cannot be published. The inactive type `manual` is no longer supported.	| See Notice Types table for valid notice types |	Publish
 400|Notice Type |	The opportunity type `j` is no longer supported	| See Notice Types table for valid notice types |	Publish
 400|Notice Type |	The opportunity type `m` is no longer supported	| See Notice Types table for valid notice types |	Publish
 400|Notice Type |	The opportunity type `l` is no longer supported	| See Notice Types table for valid notice types |	Publish
